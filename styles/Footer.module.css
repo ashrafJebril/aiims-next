@@ -1,0 +1,10 @@
+.footer {
+    background-image: url("../images/footer-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    margin-top: -310px;
+    padding-top: 400px;
+    z-index: 1;
+}

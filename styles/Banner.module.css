@@ -1,0 +1,50 @@
+.banner {
+    background-image: url("../images/home-banner.jpg");
+    /* The image used */
+    /* Used if the image is unavailable */
+    height: 978.07px;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+
+.bannerLion {
+    z-index: 2;
+    position: absolute;
+    right: 200px;
+    top: -300px;
+    min-height: 700px;
+    width: 750px;
+
+
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.rotate {
+
+    animation: rotation 15s infinite linear;
+
+    /* Center the image */
+    min-height: 700px;
+    width: 750px;
+    top: -350px;
+    right: 200px;
+    z-index: 1;
+    position: absolute;
+
+
+}

@@ -1,0 +1,10 @@
+.header {
+
+    background: #292929 !important;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    transition: ease 0.4s;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(90px);
+}

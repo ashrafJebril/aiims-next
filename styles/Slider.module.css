@@ -1,0 +1,39 @@
+.wrap {
+
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.box {
+    animation: moveToLeft linear infinite;
+    animation-duration: 16s;
+    background: url("../images/clouds.svg");
+    height: 200px;
+    background-size: cover;
+    left: calc(0% - 100px);
+    position: absolute;
+    width: 500px;
+}
+
+.main_slider {
+    background-image: url("../images/slider.svg");
+    background-repeat: no-repeat;
+    margin-top: -150px;
+    background-size: 300px;
+    background-position: center;
+    height: 650px;
+    width: 338px;
+
+}
+
+@keyframes moveToLeft {
+    0% {
+        left: calc(100% + 900px);
+    }
+
+    100% {
+        left: calc(0% - 900px);
+    }
+}
