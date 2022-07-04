@@ -6,8 +6,12 @@ import Slider from "../components/Slider";
 import Crousel from "../components/Crousel";
 import birds from "../images/birds.svg";
 import sliderStyles from "../styles/Slider.module.css";
-
+import useHomePageData from '../helper/customHooks/useHomePage'
 export default function Home() {
+  const { data, error } = useHomePageData();
+  if (error) return <div>Failed to load</div>
+  if (!data) return <div>Loading...</div>
+  const loader = `http://localhost:1338${data.attributes.mainBanner?.background.data.attributes.url}`;
   return (
     <div>
       <Head>
@@ -16,6 +20,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
+      <div className="flex justify-center text-lg items-center w-full text-center" >
+        <span>
+          <Image loader={() => loader} src={`http://localhost:1338${data.attributes.mainBanner?.background.data.attributes.url}`} width="200px" height="200px" />
+          {data.attributes.text}
+        </span>
+      </div>
       <div
         className="relative "
         style={{ height: "978px", background: "#EFEFEF" }}

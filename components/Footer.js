@@ -8,8 +8,8 @@ import solder from "../images/footer/Vector.svg";
 import footerStyle from "../styles/Footer.module.css";
 
 const Footer = () => {
-  const arr = [img1, img2, img3, img4, img5].map((e) => {
-    return <img src={e.src} className="mr-6"></img>;
+  const arr = [img1, img2, img3, img4, img5].map((e,idx) => {
+    return <img key={idx} src={e.src} className="mr-6"></img>;
   });
   return (
     <footer className={footerStyle.footer + " text-white flex justify-center "}>
@@ -75,33 +75,33 @@ const Footer = () => {
                 <div>
                   <div className="flex items-center">
                     <i
-                      class="fa fa-map-marker mr-3 text-lg"
+                      className="fa fa-map-marker mr-3 text-lg"
                       aria-hidden="true"
                     ></i>
 
                     <span>6 Palmer Street, Parramatta NSW 2150</span>
                   </div>
 
-                  <div class="w-3/4 my-4 flex items-start">
-                    <i class="fas fa-clock mr-3 text-lg"></i>
+                  <div className="w-3/4 my-4 flex items-start">
+                    <i className="fas fa-clock mr-3 text-lg"></i>
 
                     <span>
                       Monday - Friday : 9am - 5pm Saturday/Sunday : Closed
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <i class="fa-solid fa-phone mr-3 text-lg"></i>
+                    <i className="fa-solid fa-phone mr-3 text-lg"></i>
 
                     <span>1300 397 603</span>
                   </div>
                 </div>
                 <div className="w-1/2 flex text-lg mt-6 justify-between ">
-                  <i class="fab fa-youtube"></i>
-                  <i class="fab fa-whatsapp"></i>
-                  <i class="fab fa-tiktok"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-instagram"></i>
-                  <i class="fab fa-facebook"></i>
+                  <i className="fab fa-youtube"></i>
+                  <i className="fab fa-whatsapp"></i>
+                  <i className="fab fa-tiktok"></i>
+                  <i className="fab fa-twitter"></i>
+                  <i className="fab fa-instagram"></i>
+                  <i className="fab fa-facebook"></i>
                 </div>
               </div>
             </div>
