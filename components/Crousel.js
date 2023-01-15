@@ -18,7 +18,7 @@ const Slider = () => {
     <div style={{ height: "400px" }}>
       <SimpleImageSlider
         width="100%"
-        height={400}
+        height={600}
         images={images}
         autoPlay={true}
         // showBullets={true}
